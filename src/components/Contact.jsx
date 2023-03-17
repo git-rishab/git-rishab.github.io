@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
+import { github_logo, call, mail, linkedin } from "../assets/index";
+import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
@@ -65,75 +66,103 @@ const Contact = () => {
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    className={` mt-20 `}
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-[#151030] p-8 rounded-2xl'
-      >
-
-        <h3 className={styles.sectionHeadText}>Message me</h3>
-
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-[#FFFFFF] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your E-mail address?"
-              className='bg-[#FFFFFF] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-[#FFFFFF] py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-
-          <button
-            type='submit'
-            className='bg-[#AAA6B8] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <div className="">
-          <p className={`${styles.heroSubText} mt-2  text-white-100`}>Get in touch</p>
-          <p><a href="">github.com/<u>rishab</u></a></p>
-          <p><a href="">linkedin.com/in/<u>rishab</u></a></p>
-          <p><a href=""><u>rishabkumarchaurasiya</u>@gmail.com</a></p>
-          <p>+91 87897-04301</p>
+      <motion.div variants={textVariant()}>
+        <p className={`${styles.sectionHeadText} text-center text-[#0E0F1F]`}>Contact me</p>
+        <div class="inline-flex items-center justify-center w-full">
+          <hr className="w-64 h-px my-8 bg-[#0E0F1F] border-0 dark:bg-[#0E0F1F]" />
+          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white`}>get in touch</span>
         </div>
       </motion.div>
+
+      <div className={`xl:mt-12 flex xl:flex-row justify-between flex-col-reverse overflow-hidden`}>
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className='flex-[0.50] border p-8 rounded-2xl w-[50px]'
+        >
+
+          <h3 className={`${styles.heroSubText} text-black`}>Message me</h3>
+
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className='mt-10 flex flex-col gap-8'
+          >
+            <label className='flex flex-col'>
+              <span className='text-[#0E0F1F] font-medium mb-4'>Your Name</span>
+              <input
+                type='text'
+                name='name' 
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your good name?"
+                className=' py-4 px-6 placeholder:text-secondary rounded-lg outline-none border font-medium bg-white text-black'
+              />
+            </label>
+            <label className='flex flex-col'>
+              <span className='text-[#0E0F1F] font-medium mb-4'>Your email</span>
+              <input
+                type='email'
+                name='email'
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your E-mail address?"
+                className=' py-4 px-6 placeholder:text-secondary rounded-lg outline-none border bg-white text-black font-medium'
+              />
+            </label>
+            <label className='flex flex-col'>
+              <span className='text-[#0E0F1F] font-medium mb-4'>Your Message</span>
+              <textarea
+                rows={3}
+                name='message'
+                value={form.message}
+                onChange={handleChange}
+                placeholder='What you want to say?'
+                className=' py-4 px-6 placeholder:text-secondary rounded-lg outline-none border bg-white text-black font-medium'
+              />
+            </label>
+
+            <button
+              type='submit'
+              className='bg-[#915EFF] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            >
+              {loading ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </motion.div>
+
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className='xl:flex-[0.40] xl:h-auto md:h-[550px] h-[350px] self-center'
+        >
+          <div className=" p-[30px] border rounded-[20px]">
+            <div className={`${styles.heroSubText}`}>
+              <span className="text-[#0E0F1F]">Get in touch</span>
+            </div>
+
+            <div className="text-black mt-4 flex">
+              <img src={github_logo} alt="github" className="h-6 w-6 mr-7"  />
+              <a href="https://github.com/git-rishab" target="_blank">github.com/<u>rishab</u></a>
+            </div>
+
+            <div className="text-black mt-3 flex">
+              <img src={linkedin} alt="linkedin" className="h-6 w-6 mr-7" />
+              <a href="https://www.linkedin.com/in/rishab-kumar-chaurasiya-a144b4234/" target="_blank">linkedin.com/in/<u>rishab</u></a>
+            </div>
+
+            <div className="text-black mt-3 flex">
+              <img src={mail} alt="mail" className="h-6 w-6 mr-7" />
+              <span><u>rishabkumarchaurasiya</u>@gmail.com</span>
+            </div>
+
+            <div className="text-black mt-3 flex">
+              <img src={call} alt="call" className="h-6 w-6 mr-7" />
+              <span>+91 87897-04301</span>
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </div>
   );
 };

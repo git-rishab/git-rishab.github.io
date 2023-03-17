@@ -8,8 +8,43 @@ import { logo, menu, close } from '../assets';
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 90) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const fileId = "1vMZVo1CjEYCJqJUu6gKNMdHFN2CuFwkR"; // Replace with your own file ID
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
+
+    const newTab = window.open(viewUrl, "_blank");
+    newTab.focus();
+
+    const downloadLink = document.createElement("a");
+    downloadLink.href = downloadUrl;
+    downloadLink.click();
+  };
+
+
   return (
-    <nav id='nav-menu' className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    <nav id='nav-menu' className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-colors duration-300 ${isScrolled ? 'bg-gray-800' : ''}`}>
+
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
           to="/"
@@ -34,6 +69,9 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
+          <li className='hover:text-white text-[18px] font-medium cursor-pointer text-secondary'>
+            <a onClick={handleClick}>Resume</a>
+          </li>
         </ul>
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
@@ -58,7 +96,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </nav >
   )
 }
 

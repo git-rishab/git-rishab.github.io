@@ -6,6 +6,7 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Stats from './Stats';
 import Contact from './Contact';
+import Created from "./created";
 
 export {
   Home,
@@ -14,6 +15,7 @@ export {
   Skills,
   Projects,
   Contact,
+  Created,
   Stats,
   BallCanvas, 
   ComputersCanvas, 

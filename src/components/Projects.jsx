@@ -6,8 +6,12 @@ import { github, deploy } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { useRef, useEffect } from "react";
+import lottie from "lottie-web";
+import { build } from "../assets/index.js";
 
 const ProjectCard = ({
+  
   index,
   name,
   description,
@@ -17,6 +21,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      
       <Tilt
         options={{
           max: 45,
@@ -78,12 +83,25 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+  const containerRef = useRef(null);
 
+  useEffect(() => {
+    if (containerRef.current && !containerRef.current.hasChildNodes()) {
+      lottie.loadAnimation({
+        container: containerRef.current,
+        animationData: build
+      });
+    }
+  }, []);
   return (
     <>
+      <div id="coding" ref={containerRef} className="w-[500px] h-[500px] absolute top-[-200px] left-[-100px]" />
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-center`}>My work</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Projects</h2>
+      <p className={`${styles.sectionHeadText} text-center text-white`}>Projects</p>
+      <div className="inline-flex items-center justify-center w-full">
+        <hr className="w-64 h-px my-8 bg-white border-0 dark:bg-white" />
+          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-[#407BFF] left-1/2 dark:text-[#407BFF] dark:bg-[#0E0F1F]`}>what i have built</span>
+      </div>
       </motion.div>
 
       <div className='w-full flex'>

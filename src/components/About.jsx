@@ -10,7 +10,11 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionHeadText} text-center`}>About Me</p>
+        <p className={`${styles.sectionHeadText} text-center text-black`}>About Me</p>
+        <div class="inline-flex items-center justify-center w-full">
+          <hr className="w-64 h-px my-8 bg-[#0E0F1F] border-0 dark:bg-[#0E0F1F]" />
+            <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white`}>who i am</span>
+        </div>
       </motion.div>
 
       <motion.p
