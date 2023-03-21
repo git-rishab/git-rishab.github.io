@@ -2,7 +2,7 @@ import coding from './lotties/coding.json';
 import build from './lotties/build.json';
 
 
-import logo from "./logo.svg";
+import logo from "./logo.png";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";

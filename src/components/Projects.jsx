@@ -18,6 +18,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  deployed_link
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -28,9 +29,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full '
       >
-        <div className='relative w-full h-[230px]'>
+        <div className='relative w-full h-[230px] project-card'>
           <img
             src={image}
             alt='project_image'
@@ -40,7 +41,7 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-between m-3 card-img_hover'>
             <div
               onClick={() => window.open(deployed_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer project-deployed-link'
             >
               <img
                 src={deploy}
@@ -51,7 +52,7 @@ const ProjectCard = ({
 
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer project-github-link'
             >
               <img
                 src={github}
@@ -63,11 +64,11 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className='text-white font-bold text-[24px] project-title'>{name}</h3>
+          <p className='mt-2 text-secondary text-[14px] project-description'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 project-tech-stack'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -83,24 +84,14 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  const containerRef = useRef(null);
 
-  useEffect(() => {
-    if (containerRef.current && !containerRef.current.hasChildNodes()) {
-      lottie.loadAnimation({
-        container: containerRef.current,
-        animationData: build
-      });
-    }
-  }, []);
   return (
     <>
-      <div id="coding" ref={containerRef} className="w-[500px] h-[500px] absolute top-[-200px] left-[-100px]" />
       <motion.div variants={textVariant()}>
       <p className={`${styles.sectionHeadText} text-center text-white`}>Projects</p>
       <div className="inline-flex items-center justify-center w-full">
         <hr className="w-64 h-px my-8 bg-white border-0 dark:bg-white" />
-          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-[#407BFF] left-1/2 dark:text-[#407BFF] dark:bg-[#0E0F1F]`}>what i have built</span>
+          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-[#407BFF] left-1/2 dark:text-[#407BFF] dark:bg-[#0E0F1F] text-center`}>what i have built</span>
       </div>
       </motion.div>
 
@@ -113,7 +104,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className='mt-5 flex flex-wrap gap-7'>
+      <div id="projects" className='mt-5 flex flex-wrap gap-7 justify-center m-auto'>
 
         {projects.map((project, index) => (
           <ProjectCard  key={`project-${index}`} index={index} {...project} />

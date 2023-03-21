@@ -59,7 +59,7 @@ const Navbar = () => {
             Rishab
           </p>
         </Link>
-        <ul className='list-none hidden sm:flex flex-row gap-10'>
+        <ul className='list-none hidden md:flex flex-row gap-10'>
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -69,11 +69,11 @@ const Navbar = () => {
               <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
-          <li className='hover:text-white text-[18px] font-medium cursor-pointer text-secondary'>
-            <a onClick={handleClick}>Resume</a>
+          <li className='hover:text-white text-[18px] font-medium cursor-pointer text-secondary nav-link.resume'>
+            <a onClick={handleClick} id="resume-button-1">Resume</a>
           </li>
         </ul>
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='md:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu} alt="menu"
             className='w-[28px] h-[28px] object-contain cursor-pointer'
@@ -92,6 +92,9 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <li className='hover:text-white text-[18px] font-medium cursor-pointer text-secondary nav-link.resume'>
+                <a onClick={handleClick} id="resume-button-1">Resume</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -9,14 +9,19 @@ const App = () => {
         <div className="relative z-50 bg-[#0E0F1F]">
           <Navbar />
           <Home />
-          <StarsCanvas/>
+          <div className = "hidden xl:contents">
+            <StarsCanvas/>
+          </div>
         </div>
 
         <div className="bg-white">
           <About />
         </div>
 
-        <div className="bg-[#0E0F1F]">
+        <div 
+        // className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+        className="bg-[#050816]"
+        >
           <Skills />
           <Projects />
         </div>

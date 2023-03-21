@@ -111,7 +111,7 @@ const projects = [
         ],
         image: workflow,
         source_code_link: "https://github.com/git-rishab/attractive-flower-9726",
-        deployed_link:""
+        deployed_link:"https://work-flow01.netlify.app/"
     },
     {
         name: "1800flowers (clone)",
@@ -137,7 +137,7 @@ const projects = [
         ],
         image: prettypetals,
         source_code_link: "https://github.com/git-rishab/judicious-rice-4024",
-        deployed_link:""
+        deployed_link:"https://theprettypetals.netlify.app/"
     },
     {
         name: "Naukri (clone)",
@@ -159,7 +159,29 @@ const projects = [
         ],
         image: jobsearch,
         source_code_link: "https://github.com/git-rishab/indigo-oven-1251",
-        deployed_link:""
+        deployed_link:"https://joyful-malasada-2d0d65.netlify.app/"
+    },
+    {
+        name: "Naukri (clone)",
+        description:
+            "Clone of naukri.com, It is a website where job recruiters can come and post for job opportunities and the people who needs job can apply for the same",
+        tags: [
+            {
+                name: "HTML",
+                color: "html",
+            },
+            {
+                name: "CSS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "JavaScript",
+                color: "javascript",
+            },
+        ],
+        image: jobsearch,
+        source_code_link: "https://github.com/git-rishab/indigo-oven-1251",
+        deployed_link:"https://joyful-malasada-2d0d65.netlify.app/"
     },
 ];
 

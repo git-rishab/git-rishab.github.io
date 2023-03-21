@@ -24,12 +24,15 @@ const Stats = () => {
                     <GitHubCalendar username="git-rishab" />
                 </div>
 
-                <div className="flex justify-center m-auto mt-20">
-                    <div id="github-stats-card" className="mr-[200px]">
-                        <img src="https://github-readme-stats.vercel.app/api?username=git-rishab&theme=material-palenight&show_icons=true" alt="Github stats" />
+                <div className="flex justify-center m-auto mt-20 flex-col lg:flex-row gap-5 items-center">
+                    <div>
+                        <img src="https://github-readme-streak-stats.herokuapp.com?user=git-rishab&theme=material-palenight&hide_border=true" alt="Streak Stats" id="github-streak-stats" />
                     </div>
-                    <div id="github-top-langs">
-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=git-rishab&hide_progress=false&theme=material-palenight" alt="Most used languages" />
+                    <div className="">
+                        <img src="https://github-readme-stats.vercel.app/api?username=git-rishab&theme=material-palenight&show_icons=true" alt="Github stats" id="github-stats-card" />
+                    </div>
+                    <div>
+                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=git-rishab&hide_progress=false&theme=material-palenight" alt="Most used languages" id="github-top-langs" />
                     </div>
                 </div>
 

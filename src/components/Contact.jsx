@@ -72,23 +72,22 @@ const Contact = () => {
         <p className={`${styles.sectionHeadText} text-center text-[#0E0F1F]`}>Contact me</p>
         <div class="inline-flex items-center justify-center w-full">
           <hr className="w-64 h-px my-8 bg-[#0E0F1F] border-0 dark:bg-[#0E0F1F]" />
-          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white`}>get in touch</span>
+          <span className={`${styles.sectionSubText} absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white text-center`}>get in touch</span>
         </div>
       </motion.div>
 
-      <div className={`xl:mt-12 flex xl:flex-row justify-between flex-col-reverse overflow-hidden`}>
+      <div className={`xl:mt-12 flex xl:flex-row justify-between flex-col-reverse overflow-hidden`} id="contact">
         <motion.div
           variants={slideIn("left", "tween", 0.2, 1)}
-          className='flex-[0.50] border p-8 rounded-2xl w-[50px]'
+          className='flex border md:p-8 rounded-2xl w-6/12 w-full p-4'
         >
-
-          <h3 className={`${styles.heroSubText} text-black`}>Message me</h3>
 
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='mt-10 flex flex-col gap-8'
+            className='flex flex-col gap-8 w-full'
           >
+          <h3 className={`${styles.heroSubText} text-black`}>Message me</h3>
             <label className='flex flex-col'>
               <span className='text-[#0E0F1F] font-medium mb-4'>Your Name</span>
               <input
@@ -134,31 +133,31 @@ const Contact = () => {
 
         <motion.div
           variants={slideIn("right", "tween", 0.2, 1)}
-          className='xl:flex-[0.40] xl:h-auto md:h-[550px] h-[350px] self-center'
+          className='flex xl:h-auto h-[350px] w-6/12 xs:w-full '
         >
-          <div className=" p-[30px] border rounded-[20px]">
+          <div className=" md:p-[30px] border rounded-[20px] p-2 m-auto">
             <div className={`${styles.heroSubText}`}>
               <span className="text-[#0E0F1F]">Get in touch</span>
             </div>
 
             <div className="text-black mt-4 flex">
-              <img src={github_logo} alt="github" className="h-6 w-6 mr-7"  />
-              <a href="https://github.com/git-rishab" target="_blank">github.com/<u>rishab</u></a>
+              <img src={github_logo} alt="github" className="h-6 w-6 mr-7 xs:mr-3"  />
+              <a href="https://github.com/git-rishab"  id="contact-github" target="_blank">github.com/<u>rishab</u></a>
             </div>
 
             <div className="text-black mt-3 flex">
-              <img src={linkedin} alt="linkedin" className="h-6 w-6 mr-7" />
-              <a href="https://www.linkedin.com/in/rishab-kumar-chaurasiya-a144b4234/" target="_blank">linkedin.com/in/<u>rishab</u></a>
+              <img src={linkedin} alt="linkedin" className="h-6 w-6 mr-7 xs:mr-3" />
+              <a href="https://www.linkedin.com/in/rishab-kumar-chaurasiya-a144b4234/" target="_blank" id="contact-linkedin">linkedin.com/in/<u>rishab</u></a>
             </div>
 
             <div className="text-black mt-3 flex">
-              <img src={mail} alt="mail" className="h-6 w-6 mr-7" />
-              <span><u>rishabkumarchaurasiya</u>@gmail.com</span>
+              <img src={mail} alt="mail" className="h-6 w-6 mr-7 xs:mr-3" />
+              <p id="contact-email"><u>rishabkumarchaurasiya</u>@gmail.com</p>
             </div>
 
             <div className="text-black mt-3 flex">
-              <img src={call} alt="call" className="h-6 w-6 mr-7" />
-              <span>+91 87897-04301</span>
+              <img src={call} alt="call" className="h-6 w-6 mr-7 xs:mr-3" />
+              <span id="contact-phone">+91 87897-04301</span>
             </div>
           </div>
         </motion.div>
