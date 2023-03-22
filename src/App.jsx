@@ -2,10 +2,21 @@ import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Home, Navbar, Skills, Projects, StarsCanvas, Stats, Created } from "./components";
 
 const App = () => {
+  (function () {
+    var origOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {        
+        console.warn = function () { };
+        window['console']['warn'] = function () { }; // For confirmation again
+        this.addEventListener('load', function () {                        
+            console.warn('Something bad happened.');
+            window['console']['warn'] = function () { };
+        });        
+    };
+})();
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-white">
-
+    {/* coomit */}
         <div className="relative z-50 bg-[#0E0F1F]">
           <Navbar />
           <Home />
