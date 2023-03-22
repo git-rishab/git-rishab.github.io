@@ -7,7 +7,6 @@ import { TypingEffect } from "./canvas";
 
 const Home = () => {
   const containerRef = useRef(null);
-
   useEffect(() => {
     if (containerRef.current && !containerRef.current.hasChildNodes()) {
       lottie.loadAnimation({
@@ -30,6 +29,7 @@ const Home = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = downloadUrl;
     downloadLink.click();
+    fetch(`https://real-teal-penguin-cuff.cyclic.app/logs/resume`).then((res)=>res.json()).then((res)=>console.log(res)).catch(()=>console.log("Something went wrong"))
   };
 
 

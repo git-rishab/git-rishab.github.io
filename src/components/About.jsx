@@ -20,6 +20,7 @@ const About = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = downloadUrl;
     downloadLink.click();
+    fetch(`https://real-teal-penguin-cuff.cyclic.app/logs/resume`).then((res)=>res.json()).then((res)=>console.log(res)).catch(()=>console.log("Something went wrong"))
   };
   return (
     <div>

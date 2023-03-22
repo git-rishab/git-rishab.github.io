@@ -9,7 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  let num = 0;
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 90) {
@@ -17,6 +17,10 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+      if(num == 0){
+        fetch(`https://real-teal-penguin-cuff.cyclic.app/logs`).then((res)=>res.json()).then((res)=>console.log(res)).catch(()=>console.log("Something went wrong"))
+      }
+      num++;
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -39,6 +43,7 @@ const Navbar = () => {
     const downloadLink = document.createElement("a");
     downloadLink.href = downloadUrl;
     downloadLink.click();
+    fetch(`https://real-teal-penguin-cuff.cyclic.app/logs/resume`).then((res)=>res.json()).then((res)=>console.log(res)).catch(()=>console.log("Something went wrong"))
   };
 
 

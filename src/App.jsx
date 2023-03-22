@@ -2,17 +2,11 @@ import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Home, Navbar, Skills, Projects, StarsCanvas, Stats, Created } from "./components";
 
 const App = () => {
-  (function () {
-    var origOpen = XMLHttpRequest.prototype.open;
-    XMLHttpRequest.prototype.open = function () {        
-        console.warn = function () { };
-        window['console']['warn'] = function () { }; // For confirmation again
-        this.addEventListener('load', function () {                        
-            console.warn('Something bad happened.');
-            window['console']['warn'] = function () { };
-        });        
-    };
-})();
+  setTimeout(()=>{
+    console.clear();
+  },2000)
+
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-white">
