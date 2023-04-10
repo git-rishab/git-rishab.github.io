@@ -47,7 +47,7 @@ const About = () => {
                 Full stack Web Developer with proficiency in working with interdisciplinary teams and executing goal-oriented projects. Capable of writing production-ready code using HTML, CSS, and JavaScript on the frontend. NodeJS, express, and mongoose on the backend. Passionate about coding and intensely interested in working in a progressive organization.
               </p>
 
-              <div className = {`${styles.heroSubText} bg-[#407BFF] px-7 py-2 mt-12 rounded-xl w-fit hover:cursor-pointer hover:bg-[#7AA3FF] text-white m-auto`}>
+              <div className = {`${styles.heroSubText} bg-[#407BFF] px-4 py-2 mt-12 rounded-xl w-fit hover:cursor-pointer hover:bg-[#7AA3FF] text-white m-auto`}>
                 <a onClick={handleClick}  id="resume-button-2">Preview Resume</a>
               </div>
             </div>

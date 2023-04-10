@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 import { github_logo, call, mail, linkedin } from "../assets/index";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
@@ -32,8 +31,8 @@ const Contact = () => {
 
     
     fetch(`https://real-teal-penguin-cuff.cyclic.app/message`, {
-      method:"POST",
-      headers:{
+      method: "POST",
+      headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(
@@ -43,47 +42,18 @@ const Contact = () => {
           message: form.message,
         }
       )
-    }).then((res)=>res.json()).then((res)=>{
-      console.log(res);
-      setLoading(true);
-    }).catch(()=>console.log("Something went wrong"))
+    }).then((res) => res.json()).then((res) => {}).catch(() => console.log("Something went wrong"))
 
-    // emailjs
-    //   .send(
-    //     // import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-    //     // import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    //     {
-    //       from_name: form.name,
-    //       to_name: "JavaScript Mastery",
-    //       from_email: form.email,
-    //       to_email: "sujata@jsmastery.pro",
-    //       message: form.message,
-    //     },
-    //     // import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    //   )
-    //   .then(
-    //     () => {
-    //       setLoading(false);
-    //       alert("Thank you. I will get back to you as soon as possible.");
-
-    //       setForm({
-    //         name: "",
-    //         email: "",
-    //         message: "",
-    //       });
-    //     },
-    //     (error) => {
-    //       setLoading(false);
-    //       console.error(error);
-
-    //       alert("Ahh, something went wrong. Please try again.");
-    //     }
-    //   );
+    Swal.fire(
+      'Thanks for Contacting',
+      'I will revert back in 24 hrs',
+      'success'
+    )
   };
 
   return (
     <div
-    className={` mt-20 `}
+      className={` mt-20 `}
     >
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionHeadText} text-center text-[#0E0F1F]`}>Contact me</p>
@@ -104,12 +74,12 @@ const Contact = () => {
             onSubmit={handleSubmit}
             className='flex flex-col gap-8 w-full'
           >
-          <h3 className={`${styles.heroSubText} text-black`}>Message me</h3>
+            <h3 className={`${styles.heroSubText} text-black`}>Message me</h3>
             <label className='flex flex-col'>
               <span className='text-[#0E0F1F] font-medium mb-4'>Your Name</span>
               <input
                 type='text'
-                name='name' 
+                name='name'
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What's your good name?"
@@ -161,8 +131,8 @@ const Contact = () => {
             </div>
 
             <div className="text-black mt-4 flex">
-              <img src={github_logo} alt="github" className="h-6 w-6 mr-7 xs:mr-3"  />
-              <a href="https://github.com/git-rishab"  id="contact-github" target="_blank">github.com/<u>rishab</u></a>
+              <img src={github_logo} alt="github" className="h-6 w-6 mr-7 xs:mr-3" />
+              <a href="https://github.com/git-rishab" id="contact-github" target="_blank">github.com/<u>rishab</u></a>
             </div>
 
             <div className="text-black mt-3 flex">

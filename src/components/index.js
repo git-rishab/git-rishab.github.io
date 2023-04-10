@@ -1,4 +1,4 @@
-import { BallCanvas, ComputersCanvas, StarsCanvas, TypingEffect } from './canvas';
+import { BallCanvas, StarsCanvas, TypingEffect } from './canvas';
 import Navbar from './Navbar';
 import Home from './Home';
 import About from './About';
@@ -19,6 +19,5 @@ export {
   Stats,
   TypingEffect,
   BallCanvas, 
-  ComputersCanvas, 
   StarsCanvas
 }

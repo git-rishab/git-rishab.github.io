@@ -1,6 +1,6 @@
 /* Testing */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .container {
   height: 100vh;
@@ -36,6 +36,20 @@
   50% { background-color: transparent; }
   99% { background-color: transparent; }
   100%  { background-color: #ccc; }
-}
+} */
 
 /* Till here */
+
+body::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #0E0F1F;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #915EFF;    /* color of the scroll thumb */
+  border-radius: 5px;       /*roundness of the scroll thumb*/
+  /* border: 1px solid orange;  creates padding around scroll thumb */
+}
