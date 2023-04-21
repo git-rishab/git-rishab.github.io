@@ -22,19 +22,37 @@ body::-webkit-scrollbar-thumb {
     background-color: #915EFF;
     color of the scroll thumb
     border-radius: 5px;
-    roundness of the scroll thumb
-    border: 1px solid orange;  creates padding around scroll thumb
+    roundness of the scroll thumb 
+    creates padding around scroll thumb
 } */
+
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    background: #0E0F1F;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #915EFF;
+    border-radius: 5px;
+}
+
+
+#ham {
+    display: none;
+}
 
 #nav-menu {
     display: flex;
     width: 100%;
-    /* background-color: #1F2937; */
+    background-color: #1F2937;
     padding: 1rem 10%;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 599;
+    z-index: 4;
 }
 
 .navlist {
@@ -58,27 +76,27 @@ body::-webkit-scrollbar-thumb {
     margin-right: 10px;
 }
 
+.head-hr{
+    background-color: #fff;
+}
 
 /* Home section */
 
 #top-section {
     height: 100vh;
     width: 100%;
-    /* border: 1px solid red; */
-    /* background-color: #0E0F1F; */
 }
 
 #home {
     width: 75%;
     margin: auto;
-    /* margin-top: 100px; */
+    padding-top: 100px;
 }
 
 #hero {
     display: flex;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     width: fit-content;
-    /* border: 1px solid white; */
 }
 
 #user-detail-name {
@@ -174,11 +192,11 @@ body::-webkit-scrollbar-thumb {
     font-weight: 900;
     font-size: 60px;
     text-align: center;
-    margin-top: 70px;
 }
 
 #about {
     margin-bottom: 80px;
+    padding-top: 100px;
 }
 
 /* .section-subhead {
@@ -273,16 +291,14 @@ body::-webkit-scrollbar-thumb {
     background-color: #0E0F1F;
 }
 
+
 /* Skills Section */
-
-
 #skills {
-    padding-top: 1px;
+    padding-top: 100px;
     margin-bottom: 80px;
 }
 
 #skills-part {
-    /* border: 1px solid white; */
     width: 75%;
     margin: auto;
     display: grid;
@@ -290,6 +306,7 @@ body::-webkit-scrollbar-thumb {
     grid-template-rows: auto;
     align-items: center;
     gap: 40px;
+    margin-top: 30px;
 }
 
 .skills-card {
@@ -322,6 +339,8 @@ body::-webkit-scrollbar-thumb {
 #projects {
     width: 90%;
     margin: auto;
+    padding-top: 100px;
+    padding-bottom: 70px;
 }
 
 #nav-link-projects {
@@ -330,6 +349,7 @@ body::-webkit-scrollbar-thumb {
     grid-template-rows: auto;
     justify-content: space-around;
     row-gap: 60px;
+    margin-top: 30px;
 }
 
 .project-card {
@@ -349,7 +369,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-.project-description{
+
+.project-description {
     color: #736E8D;
 }
 
@@ -384,10 +405,11 @@ body::-webkit-scrollbar-thumb {
     height: 100%;
 }
 
-.card-img{
+.card-img {
     border-radius: 7px;
 }
-.card-img img{
+
+.card-img img {
     border-radius: 7px;
 }
 
@@ -397,7 +419,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-around;
 }
 
-.rank{
+.rank {
     height: 50px;
     margin-bottom: 15px;
     color: #337BFF;
@@ -406,12 +428,14 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     text-align: center;
 }
-.rank img{
+
+.rank img {
     height: 100%;
     width: 50px;
     margin-right: 15px;
 }
-#rank-fifth{
+
+#rank-fifth {
     margin: 0px 10px;
 }
 
@@ -425,7 +449,8 @@ body::-webkit-scrollbar-thumb {
     padding: 8px 0px;
     margin-top: 10px;
 }
-.deployed>div:hover{
+
+.deployed>div:hover {
     cursor: pointer;
     background-color: #7AA3FF;
 }
@@ -452,44 +477,59 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Stats */
-#githubs{
+#statistics {
+    padding-top: 100px;
+}
+
+#githubs {
     width: 85%;
     margin: auto;
+    margin-top: 30px;
 }
-.calendar{
+
+.calendar {
     width: 70%;
 }
-#stat{
+
+#stat {
     display: flex;
     width: 100%;
     justify-content: space-between;
     margin-top: 80px;
 }
-#stat > div:nth-child(3){
+
+#stat>div:nth-child(3) {
     border: 1px solid #DDDDDD;
     border-radius: 4px;
 }
-.float-right{
+
+.float-right {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.float-right > svg{
+.float-right>svg {
     margin-left: 2px;
     margin-right: 2px;
 }
 
 
 /* Contact section */
-#contact-section{
+#contact {
+    padding-top: 100px;
+}
+
+#contact-section {
     width: 75%;
     display: flex;
     margin: auto;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
 }
-#form{
+
+#form {
     display: flex;
     flex-direction: column;
     border: 1px solid #DDDDDD;
@@ -497,30 +537,35 @@ body::-webkit-scrollbar-thumb {
     padding: 30px;
     width: 50%;
 }
-#form p{
+
+#form p {
     color: black;
     margin-bottom: 20px;
 }
-#form input{
+
+#form input {
     width: 100%;
     border: 1px solid #DDDDDD;
     outline: none;
     padding: 10px;
     border-radius: 7px;
 }
-#form div{
+
+#form div {
     margin-bottom: 30px;
 }
-#submit{
+
+#submit {
     background-color: #407BFF;
     color: white;
 }
-#submit:hover{
+
+#submit:hover {
     cursor: pointer;
     background-color: #7AA3FF;
 }
 
-#contact-links{
+#contact-links {
     padding: 30px;
     color: black;
     display: flex;
@@ -529,22 +574,34 @@ body::-webkit-scrollbar-thumb {
     height: fit-content;
     border-radius: 7px;
 }
-#contact-links > div{
+
+#contact-links>div {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
-#contact-links img{
+
+#contact-links img {
     width: 30px;
     height: 30px;
     margin-right: 20px;
 }
-#contact-links > p{
+
+#contact-links>p {
     margin-bottom: 20px;
     color: black;
 }
 
+
 @media (max-width: 576px) {
+    #ham {
+        display: block;
+    }
+
+    #logo {
+        margin-left: auto;
+    }
+
     #nav-menu {
         padding: 1rem;
     }
@@ -577,7 +634,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Abput section */
-    #about>.section-head {
+    .section-head {
         font-size: 40px;
     }
 
@@ -628,12 +685,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Stats */
-    #githubs{
+    #githubs {
         width: 100%;
         margin: auto;
     }
 
-    #stat{
+    #stat {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -642,16 +699,16 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Contact section */
-    #contact-section{
+    #contact-section {
         width: 100%;
         flex-direction: column;
     }
 
-    #form{
+    #form {
         width: 95%;
     }
 
-    #contact-links{
+    #contact-links {
         width: 95%;
         padding: 30px 0;
     }
@@ -659,6 +716,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
+    #ham {
+        display: block;
+    }
+
+    #logo {
+        margin-left: auto;
+    }
+
     #nav-menu {
         padding: 1rem;
     }
@@ -680,10 +745,6 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Abput section */
-    #about>.section-head {
-        font-size: 40px;
-    }
-
     #about-section {
         width: 95%;
         flex-direction: column;
@@ -731,11 +792,12 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Stats */
-    #githubs{
+    #githubs {
         width: 100%;
         margin: auto;
     }
-    #stat{
+
+    #stat {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -744,22 +806,34 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Contact section */
-    #contact-section{
+    #contact-section {
         width: 100%;
         flex-direction: column;
     }
 
-    #form{
+    #form {
         width: 95%;
     }
 
-    #contact-links{
+    #contact-links {
         width: 95%;
         padding: 30px 0;
+    }
+
+    .section-head {
+        font-size: 40px;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+    #ham {
+        display: block;
+    }
+
+    #logo {
+        margin-left: auto;
+    }
+
     #nav-menu {
         padding: 1rem;
     }
@@ -781,7 +855,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Abput section */
-    #about>.section-head {
+    .section-head {
         font-size: 50px;
     }
 
@@ -828,16 +902,16 @@ body::-webkit-scrollbar-thumb {
     }
 
     /* Contact section */
-    #contact-section{
+    #contact-section {
         width: 100%;
         flex-direction: column;
     }
 
-    #form{
+    #form {
         width: 95%;
     }
 
-    #contact-links{
+    #contact-links {
         width: 95%;
         padding: 30px 0;
     }
@@ -894,11 +968,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (min-width: 1201px) and (max-width: 1400px) {
-    #resume-button-2 {
-        position: absolute;
-        bottom: 0;
-    }
-
     /* Project */
     #nav-link-projects {
         display: grid;
@@ -906,5 +975,12 @@ body::-webkit-scrollbar-thumb {
         grid-template-rows: auto;
         justify-content: space-around;
         row-gap: 60px;
+    }
+}
+
+@media (min-width: 1201px) {
+    #resume-button-2 {
+        position: absolute;
+        bottom: 0;
     }
 }

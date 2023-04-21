@@ -17,6 +17,8 @@
 //     navlist.classList.remove('open')
 // };
 
+const url = "";
+
 
 const container = document.getElementById('animation-container');
 const animation = bodymovin.loadAnimation({
@@ -43,21 +45,21 @@ VANTA.WAVES({
     zoom: 0.88
 })
 
-VANTA.DOTS({
-  el: "#mid-section",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: "#915eff",
-  color2: "#915eff",
-  backgroundColor: "#0e0f1f",
-  size: 3.90,
-  showLines: false
-})
+// VANTA.DOTS({
+//   el: "#mid-section",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   scale: 1.00,
+//   scaleMobile: 1.00,
+//   color: "#915eff",
+//   color2: "#915eff",
+//   backgroundColor: "#0e0f1f",
+//   size: 3.90,
+//   showLines: false
+// })
 
 
 window.ityped.init(document.querySelector('#user-detail-skill'),{
@@ -71,3 +73,19 @@ window.ityped.init(document.querySelector('#about-section-skill'),{
 })
 
 
+const toggleMenu = () => document.body.classList.toggle("open");
+
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async(e)=>{
+    e.preventDefault();
+
+    const message = {
+        name:form.name.value,
+        email:form.email.value,
+        message:form.message.value
+    }
+    
+    const request = await fetch("")
+})
