@@ -102,7 +102,7 @@ form.addEventListener("submit", async(e)=>{
         if(response.ok){
             Swal.fire(
                 'Thanks for Reaching out',
-                "I'll Revert back in 24 hours",
+                `${response.msg}`,
                 'success'
             )
             
@@ -110,7 +110,7 @@ form.addEventListener("submit", async(e)=>{
             Swal.fire({
                 icon: 'error',
                 title: 'Something went wrong!',
-                text: 'Please Contact through call',
+                text: `${response.msg}`,
             })
         }
         hideLoader();
