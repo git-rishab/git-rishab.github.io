@@ -124,4 +124,7 @@ form.addEventListener("submit", async(e)=>{
         hideLoader();
         submit.style.display = "block";
     }
+    form.name.value = "";
+    form.email.value = "";
+    form.message.value = "";
 })
