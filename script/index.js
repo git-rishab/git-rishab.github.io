@@ -17,7 +17,7 @@
 //     navlist.classList.remove('open')
 // };
 
-const url = "";
+const url = "https://portfolio-backend-5xul.onrender.com";
 
 
 const container = document.getElementById('animation-container');
@@ -80,12 +80,48 @@ const form = document.querySelector("form");
 
 form.addEventListener("submit", async(e)=>{
     e.preventDefault();
-
+    const submit = document.getElementById("submit");
+    submit.style.display = "none";
+    showLoader();
     const message = {
         name:form.name.value,
         email:form.email.value,
         message:form.message.value
     }
+    try {
+        const request = await fetch(`${url}/message`, {
+            method:"POST",
+            headers: {
+                "Content-type": "application/json",
+            },
+            body: JSON.stringify(message),
+        })
     
-    const request = await fetch("")
+        const response = await request.json();
+    
+        if(response.ok){
+            Swal.fire(
+                'Thanks for Reaching out',
+                "I'll Revert back in 24 hours",
+                'success'
+            )
+            
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Something went wrong!',
+                text: 'Please Contact through call',
+            })
+        }
+        hideLoader();
+        submit.style.display = "block";
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Something went wrong!',
+            text: 'Please Contact through call',
+        })
+        hideLoader();
+        submit.style.display = "block";
+    }
 })
