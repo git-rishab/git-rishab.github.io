@@ -1,5 +1,7 @@
 function showLoade() {
-    document.getElementById("loader").style.display = "flex";
+    const loader = document.getElementById("loader");
+    console.log(loader);
+    loader.style.display = "flex";
 }
 
 // Hide the loader
@@ -11,7 +13,7 @@ function hideLoade() {
 window.addEventListener("load", function () {
     hideLoade();
 });
-
 // Example usage
-showLoade(); // Show the loader
+// showLoade(); 
+// Show the loader
   // Load your content here
