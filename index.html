@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./style/loaderTornado.css">
     <link rel="stylesheet" href="./style/loader2.css">
     <link rel="stylesheet" href="./style/hamburger.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animation -->
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script/loader2.js"></script>
@@ -23,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script> <!-- project background -->
     <script src="./external-liabrary/net.js"></script> <!-- Skills and project background -->
     <script src="https://unpkg.com/ityped@0.0.10"></script> <!-- Text writing animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- animation -->
 
 
     <title>Rishab | Portfolio</title>
@@ -228,14 +230,14 @@
 
     <section class="about section" id="about">
 
-        <p class="section-head" style="color: #0E0F1F;">About Me</p>
+        <p class="section-head" id="skill-head" style="color: white;" data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" >About Me</p>
 
-        <div class="inline-flex items-center justify-center w-full head-hr">
-            <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
-            <span
-                class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">WHO
-                I AM</span>
-        </div>
+            <div class="inline-flex items-center justify-center w-full">
+                <hr class="w-64 h-px my-8 bg-white border-0" />
+                <span
+                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 bg-[#181818] text-center text-[14px] text-secondary uppercase tracking-wider">WHO I AM</span>
+            </div>
 
         <div id="about-section">
 
@@ -271,13 +273,13 @@
         <!-- Skills Section -->
         <section id="skills">
 
-            <p class="section-head" id="skill-head" style="color: white;">Skills</p>
+            <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom" >Skills</p>
 
             <div class="inline-flex items-center justify-center w-full">
-                <hr class="w-64 h-px my-8 bg-white border-0" />
+                <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 bg-[#0E0F1F] text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
-                    I HAVE</span>
+                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF] bg-[#F0F1F3] text-center text-[14px] text-secondary uppercase tracking-wider">WHAT I HAVE </span>
             </div>
 
             <div class="nav-link skills" id="skills-part">
@@ -347,7 +349,8 @@
         <!-- Projects  -->
         <section id="projects">
 
-            <p class="section-head" style="color: white;">Projects</p>
+            <p class="section-head" style="color: white;" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom" >Projects</p>
 
             <div class="inline-flex items-center justify-center w-full">
                 <hr class="w-64 h-px my-8 bg-white border-0" />
@@ -604,12 +607,13 @@
     <div id="bottom-section">
 
         <section id="statistics">
-            <p class="section-head" style="color: #0E0F1F;">Github Stats</p>
+            <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom" >Github Stats</p>
 
             <div class="inline-flex items-center justify-center w-full main-text head-hr">
                 <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
+                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
                     I DID</span>
             </div>
 
@@ -650,19 +654,23 @@
 
         <section class="nav-link contact" id="contact">
 
-            <p class="section-head" style="color: #0E0F1F;">Contact Me</p>
+            <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom" >Contact Me</p>
 
             <div class="inline-flex items-center justify-center w-full main-text head-hr">
                 <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 bg-black left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">GET
+                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">GET
                     IN TOUCH
                 </span>
             </div>
 
             <div id="contact-section">
 
-                <div id="form">
+                <div id="form" data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-anchor="#example-anchor"
+                data-aos-easing="ease-in-sine">
                     <p class="hero-subhead">Message Me</p>
                     <form>
 
@@ -701,7 +709,10 @@
 
                 </div>
 
-                <div id="contact-links">
+                <div id="contact-links" data-aos="fade-left"
+                data-aos-anchor="#example-anchor"
+                data-aos-offset="500"
+                data-aos-duration="500">
 
                     <p class="hero-subhead">Get in touch</p>
 

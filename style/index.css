@@ -47,7 +47,10 @@ body::-webkit-scrollbar-thumb {
 #nav-menu {
     display: flex;
     width: 100%;
-    background-color: #1F2937;
+    /* background-color: #1F2937; */
+    background-color: rgba(31, 41, 55, 0.1);
+    /* opacity: 0.1; */
+    backdrop-filter: blur(16px);
     padding: 1rem 10%;
     justify-content: space-between;
     position: fixed;
@@ -158,8 +161,8 @@ body::-webkit-scrollbar-thumb {
     background-color: #407BFF;
     /* position: absolute;
     bottom: 0; */
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
+    padding-left: 1.55rem;
+    padding-right: 1.55rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     margin-top: 3rem;
@@ -195,8 +198,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #about {
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
+    height: 100vh;
     padding-top: 100px;
+    background-image: url("../images/aboutUsBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* .section-subhead {
@@ -229,8 +237,8 @@ body::-webkit-scrollbar-thumb {
 #about-section {
     width: 75%;
     margin: auto;
-    border: 1px solid #E5E7EB;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    /* border: 1px solid #E5E7EB; */
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
     padding: 40px;
     display: flex;
     flex-direction: row;
@@ -255,7 +263,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #about-section>div:nth-child(2) .about-title {
-    color: black;
+    /* color: black; */
+    color: #fff;
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
@@ -271,6 +280,7 @@ body::-webkit-scrollbar-thumb {
 
 #user-detail-intro {
     text-align: justify;
+    color: #fff;
     letter-spacing: 1px;
     word-spacing: 8px;
     line-height: 2;
@@ -296,6 +306,12 @@ body::-webkit-scrollbar-thumb {
 #skills {
     padding-top: 100px;
     margin-bottom: 80px;
+    height: 100vh;
+    background-image: url("../images/skillsBackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 40px;
 }
 
 #skills-part {
@@ -637,7 +653,12 @@ body::-webkit-scrollbar-thumb {
     .section-head {
         font-size: 40px;
     }
-
+    #about{
+        height: fit-content;
+    }
+    #skills{
+        height: fit-content;
+    }
     #about-section {
         width: 95%;
         flex-direction: column;
@@ -683,6 +704,9 @@ body::-webkit-scrollbar-thumb {
         justify-content: space-around;
         row-gap: 60px;
     }
+    #projects {
+        padding-top: 0px;
+    }
 
     /* Stats */
     #githubs {
@@ -711,6 +735,10 @@ body::-webkit-scrollbar-thumb {
     #contact-links {
         width: 95%;
         padding: 30px 0;
+    }
+
+    .skills-card:hover {
+        transform: none;
     }
 
 }
@@ -775,7 +803,12 @@ body::-webkit-scrollbar-thumb {
     #about-section>div:nth-child(2) {
         margin-left: 0;
     }
-
+    #about{
+        height: fit-content;
+    }
+    #skills{
+        height: fit-content;
+    }
     /* Skills */
     #skills-part {
         grid-template-columns: repeat(2, 1fr);
@@ -790,7 +823,9 @@ body::-webkit-scrollbar-thumb {
         justify-content: space-around;
         row-gap: 60px;
     }
-
+    #projects {
+        padding-top: 0px;
+    }
     /* Stats */
     #githubs {
         width: 100%;
@@ -822,6 +857,9 @@ body::-webkit-scrollbar-thumb {
 
     .section-head {
         font-size: 40px;
+    }
+    .skills-card:hover {
+        transform: none;
     }
 }
 
@@ -858,7 +896,12 @@ body::-webkit-scrollbar-thumb {
     .section-head {
         font-size: 50px;
     }
-
+    #about{
+        height: fit-content;
+    }
+    #skills{
+        height: fit-content;
+    }
     #about-section {
         width: 95%;
         flex-direction: column;
@@ -899,6 +942,9 @@ body::-webkit-scrollbar-thumb {
         grid-template-rows: auto;
         justify-content: space-around;
         row-gap: 60px;
+    }
+    #projects {
+        padding-top: 0px;
     }
 
     /* Contact section */
@@ -950,7 +996,6 @@ body::-webkit-scrollbar-thumb {
     #about-section>div:nth-child(2) {
         margin-left: 0;
     }
-
     /* Skills */
     #skills-part {
         grid-template-columns: repeat(3, 1fr);

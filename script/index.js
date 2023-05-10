@@ -31,18 +31,17 @@ const animation = bodymovin.loadAnimation({
 
 
 VANTA.WAVES({
-    el: "#top-section",
+    el: '#top-section',
     mouseControls: true,
     touchControls: true,
-    gyroControls: false,
+    gyroControls: true,
     minHeight: 200.00,
     minWidth: 200.00,
     scale: 1.00,
+    zoom: 0.6,
+    waveSpeed: 0.55,
     scaleMobile: 1.00,
-    color: '#151a20',
-    shininess: 17.00,
-    waveSpeed: 0.95,
-    zoom: 0.88
+    color: '#132239'
 })
 
 // VANTA.DOTS({
@@ -89,6 +88,13 @@ form.addEventListener("submit", async(e)=>{
         message:form.message.value
     }
     try {
+        Swal.fire(
+            'Thanks for Reaching out',
+            `I'll revert back in 24 hrs`,
+            'success'
+        )
+        hideLoader();
+        submit.style.display = "block";
         const request = await fetch(`${url}/message`, {
             method:"POST",
             headers: {
@@ -97,24 +103,6 @@ form.addEventListener("submit", async(e)=>{
             body: JSON.stringify(message),
         })
     
-        const response = await request.json();
-    
-        if(response.ok){
-            Swal.fire(
-                'Thanks for Reaching out',
-                `${response.msg}`,
-                'success'
-            )
-            
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Something went wrong!',
-                text: `${response.msg}`,
-            })
-        }
-        hideLoader();
-        submit.style.display = "block";
     } catch (error) {
         Swal.fire({
             icon: 'error',
@@ -128,3 +116,5 @@ form.addEventListener("submit", async(e)=>{
     form.email.value = "";
     form.message.value = "";
 })
+
+AOS.init();
