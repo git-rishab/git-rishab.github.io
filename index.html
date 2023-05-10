@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="./style/loader2.css">
     <link rel="stylesheet" href="./style/hamburger.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animation -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./script/loader2.js"></script>
     <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script><!-- Lottie animation liabrary -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <!-- Lottie animation liabrary -->
     <script src="./script/loaderTornado.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script> <!-- Hero background -->
     <script src="./external-liabrary/waves.js"></script> <!-- Hero background -->
@@ -33,7 +34,7 @@
 <body>
 
     <div id="top-section">
-        
+
         <header id="nav-menu">
 
             <div id="logo">
@@ -42,15 +43,17 @@
             </div>
 
             <ul class="navlist">
-                <li><a href="#home" class="nav-link home active hover:text-white text-[18px] font-medium cursor-pointer"> Home</a>
+                <li><a href="#home"
+                        class="nav-link home active hover:text-white text-[18px] font-medium cursor-pointer"> Home</a>
                 </li>
                 <li><a href="#about" class="hover:text-white text-[18px] font-medium cursor-pointer"> About</a></li>
                 <li><a href="#skills" class="hover:text-white text-[18px] font-medium cursor-pointer"> Skills</a></li>
-                <li><a href="#projects" class="nav-link projects hover:text-white text-[18px] font-medium cursor-pointer"> Projects</a>
+                <li><a href="#projects"
+                        class="nav-link projects hover:text-white text-[18px] font-medium cursor-pointer"> Projects</a>
                 </li>
                 <li><a href="#contact" class="hover:text-white text-[18px] font-medium cursor-pointer"> Contact</a></li>
                 <li id="resume-button-1"><a href="/files/Rishab-Kumar-Chaurasiya_Resume.pdf" target="_blank"
-                        download="Rishab-Kumar-Chaurasiya-Resume" id="resume-link-1"
+                        download="Rishab-Kumar-Chaurasiya_Resume" id="resume-link-1"
                         class="nav-link resume hover:text-white text-[18px] font-medium cursor-pointer text-secondary"
                         onclick="window.open('https://drive.google.com/file/d/1-IlRoeEn8YK8frc6PVfGuZvsgic8aaNL/view?usp=sharing')">Resume</a>
                 </li>
@@ -59,17 +62,17 @@
 
             <div id="ham">
 
-                <button class="burger" onclick="toggleMenu()"></button>
+                <button class="burger" onclick="toggleMenu(); addFilter()"></button>
                 <div class="background"></div>
                 <div class="menu">
                     <nav>
-                        <a href="#home" style="animation-delay: 0.2s" onclick="toggleMenu()">Home</a>
-                        <a href="#about" style="animation-delay: 0.3s" onclick="toggleMenu()">About</a>
-                        <a href="#skills" style="animation-delay: 0.4s" onclick="toggleMenu()">Skills</a>
-                        <a href="#projects" style="animation-delay: 0.5s" onclick="toggleMenu()">Projects</a>
-                        <a href="#contact" style="animation-delay: 0.6s" onclick="toggleMenu()">Contact</a>
+                        <a href="#home" style="animation-delay: 0.2s" onclick="toggleMenu(); addFilter()">Home</a>
+                        <a href="#about" style="animation-delay: 0.3s" onclick="toggleMenu(); addFilter()">About</a>
+                        <a href="#skills" style="animation-delay: 0.4s" onclick="toggleMenu(); addFilter()">Skills</a>
+                        <a href="#projects" style="animation-delay: 0.5s" onclick="toggleMenu(); addFilter()">Projects</a>
+                        <a href="#contact" style="animation-delay: 0.6s" onclick="toggleMenu(); addFilter()">Contact</a>
                         <a href="/files/Rishab-Kumar-Chaurasiya_Resume.pdf" target="_blank"
-                        download="Rishab-Kumar-Chaurasiya-Resume" id="resume-link-1"
+                        download="Rishab-Kumar-Chaurasiya_Resume" id="resume-link-1"
                         class="nav-link resume hover:text-white text-[18px] font-medium cursor-pointer text-secondary"
                         onclick="window.open('https://drive.google.com/file/d/1-IlRoeEn8YK8frc6PVfGuZvsgic8aaNL/view?usp=sharing')" style="animation-delay: 0.7s" onclick="toggleMenu()">Resume</a>
                     </nav>
@@ -95,7 +98,7 @@
                         <p class="hero-subhead" id="user-detail-skill"></p>
                         <div id="resume-button-2" class="hero-subhead">
                             <a href="/files/Rishab-Kumar-Chaurasiya_Resume.pdf"
-                                download="Rishab-Kumar-Chaurasiya-Resume" id="resume-link-2"
+                                download="Rishab-Kumar-Chaurasiya_Resume" id="resume-link-2"
                                 onclick="window.open('https://drive.google.com/file/d/1-IlRoeEn8YK8frc6PVfGuZvsgic8aaNL/view?usp=sharing')">Resume</a>
                         </div>
                     </div>
@@ -104,123 +107,123 @@
 
         </section>
         <!-- Loader -->
-      <div class="loader" id="loader">
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+        <div class="loader" id="loader">
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
         </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-        <div class="dots">
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-        </div>
-      </div>
-      <!-- Loader End -->
+        <!-- Loader End -->
 
         <div id="animation-container"></div>
 
@@ -231,13 +234,14 @@
     <section class="about section" id="about">
 
         <p class="section-head" id="skill-head" style="color: white;" data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom" >About Me</p>
+            data-aos-anchor-placement="center-bottom">About Me</p>
 
-            <div class="inline-flex items-center justify-center w-full">
-                <hr class="w-64 h-px my-8 bg-white border-0" />
-                <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 bg-[#181818] text-center text-[14px] text-secondary uppercase tracking-wider">WHO I AM</span>
-            </div>
+        <div class="inline-flex items-center justify-center w-full">
+            <hr class="w-64 h-px my-8 bg-white border-0" />
+            <span
+                class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 bg-[#181818] text-center text-[14px] text-secondary uppercase tracking-wider">WHO
+                I AM</span>
+        </div>
 
         <div id="about-section">
 
@@ -274,12 +278,13 @@
         <section id="skills">
 
             <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" >Skills</p>
+                data-aos-anchor-placement="center-bottom">Skills</p>
 
             <div class="inline-flex items-center justify-center w-full">
                 <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF] bg-[#F0F1F3] text-center text-[14px] text-secondary uppercase tracking-wider">WHAT I HAVE </span>
+                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF] bg-[#F0F1F3] text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
+                    I HAVE </span>
             </div>
 
             <div class="nav-link skills" id="skills-part">
@@ -349,8 +354,8 @@
         <!-- Projects  -->
         <section id="projects">
 
-            <p class="section-head" style="color: white;" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" >Projects</p>
+            <p class="section-head" style="color: white;" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                Projects</p>
 
             <div class="inline-flex items-center justify-center w-full">
                 <hr class="w-64 h-px my-8 bg-white border-0" />
@@ -608,12 +613,12 @@
 
         <section id="statistics">
             <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" >Github Stats</p>
+                data-aos-anchor-placement="center-bottom">Github Stats</p>
 
             <div class="inline-flex items-center justify-center w-full main-text head-hr">
                 <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
+                    class="absolute px-3 font-medium bg-white text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">WHAT
                     I DID</span>
             </div>
 
@@ -655,22 +660,20 @@
         <section class="nav-link contact" id="contact">
 
             <p class="section-head" style="color: #0E0F1F;" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom" >Contact Me</p>
+                data-aos-anchor-placement="center-bottom">Contact Me</p>
 
             <div class="inline-flex items-center justify-center w-full main-text head-hr">
                 <hr class="w-64 h-px my-8 bg-[#0E0F1F] border-0" />
                 <span
-                    class="absolute px-3 font-medium text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">GET
+                    class="absolute px-3 font-medium bg-white text-[#407BFF] -translate-x-1/2 left-1/2 dark:text-[#407BFF]  dark:bg-white text-center text-[14px] text-secondary uppercase tracking-wider">GET
                     IN TOUCH
                 </span>
             </div>
 
             <div id="contact-section">
 
-                <div id="form" data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-anchor="#example-anchor"
-                data-aos-easing="ease-in-sine">
+                <div id="form" data-aos="fade-right" data-aos-offset="300" data-aos-anchor="#example-anchor"
+                    data-aos-easing="ease-in-sine">
                     <p class="hero-subhead">Message Me</p>
                     <form>
 
@@ -709,10 +712,8 @@
 
                 </div>
 
-                <div id="contact-links" data-aos="fade-left"
-                data-aos-anchor="#example-anchor"
-                data-aos-offset="500"
-                data-aos-duration="500">
+                <div id="contact-links" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="500">
 
                     <p class="hero-subhead">Get in touch</p>
 

@@ -60,20 +60,30 @@ VANTA.WAVES({
 //   showLines: false
 // })
 
-
+// Hero section
 window.ityped.init(document.querySelector('#user-detail-skill'),{
     strings: ['Full Stack Web Developer','NodeJs Backend Developer'],
     loop: true
 })
 
+// About section
 window.ityped.init(document.querySelector('#about-section-skill'),{
     strings: ['Full Stack Web Developer','NodeJs Backend Developer'],
     loop: true
 })
 
 
-const toggleMenu = () => document.body.classList.toggle("open");
-
+const toggleMenu = () => {
+    document.getElementById("nav-menu").style.backdropFilter = "none";
+    document.body.classList.toggle("open");
+};
+let temp = 0;
+const addFilter = () => {
+    temp++;
+    if(temp % 2 == 0){
+        document.getElementById("nav-menu").style.backdropFilter = "blur(16px)"
+    }
+}
 
 const form = document.querySelector("form");
 

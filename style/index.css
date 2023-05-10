@@ -704,9 +704,6 @@ body::-webkit-scrollbar-thumb {
         justify-content: space-around;
         row-gap: 60px;
     }
-    #projects {
-        padding-top: 0px;
-    }
 
     /* Stats */
     #githubs {
@@ -822,9 +819,6 @@ body::-webkit-scrollbar-thumb {
         grid-template-rows: auto;
         justify-content: space-around;
         row-gap: 60px;
-    }
-    #projects {
-        padding-top: 0px;
     }
     /* Stats */
     #githubs {
@@ -942,9 +936,6 @@ body::-webkit-scrollbar-thumb {
         grid-template-rows: auto;
         justify-content: space-around;
         row-gap: 60px;
-    }
-    #projects {
-        padding-top: 0px;
     }
 
     /* Contact section */
