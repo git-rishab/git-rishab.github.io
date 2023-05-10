@@ -69,12 +69,14 @@
                         <a href="#home" style="animation-delay: 0.2s" onclick="toggleMenu(); addFilter()">Home</a>
                         <a href="#about" style="animation-delay: 0.3s" onclick="toggleMenu(); addFilter()">About</a>
                         <a href="#skills" style="animation-delay: 0.4s" onclick="toggleMenu(); addFilter()">Skills</a>
-                        <a href="#projects" style="animation-delay: 0.5s" onclick="toggleMenu(); addFilter()">Projects</a>
+                        <a href="#projects" style="animation-delay: 0.5s"
+                            onclick="toggleMenu(); addFilter()">Projects</a>
                         <a href="#contact" style="animation-delay: 0.6s" onclick="toggleMenu(); addFilter()">Contact</a>
                         <a href="/files/Rishab-Kumar-Chaurasiya_Resume.pdf" target="_blank"
-                        download="Rishab-Kumar-Chaurasiya_Resume" id="resume-link-1"
-                        class="nav-link resume hover:text-white text-[18px] font-medium cursor-pointer text-secondary"
-                        onclick="window.open('https://drive.google.com/file/d/1-IlRoeEn8YK8frc6PVfGuZvsgic8aaNL/view?usp=sharing')" style="animation-delay: 0.7s" onclick="toggleMenu()">Resume</a>
+                            download="Rishab-Kumar-Chaurasiya_Resume" id="resume-link-1"
+                            class="nav-link resume hover:text-white text-[18px] font-medium cursor-pointer text-secondary"
+                            onclick="window.open('https://drive.google.com/file/d/1-IlRoeEn8YK8frc6PVfGuZvsgic8aaNL/view?usp=sharing')"
+                            style="animation-delay: 0.7s" onclick="toggleMenu()">Resume</a>
                     </nav>
                 </div>
             </div>
@@ -258,10 +260,14 @@
                 </div>
 
                 <p id="user-detail-intro">
-                    Full stack Web Developer with proficiency in working with interdisciplinary teams and executing
+                    <!-- Full stack Web Developer with proficiency in working with interdisciplinary teams and executing
                     goal-oriented projects. Capable of writing production-ready code using HTML, CSS, and JavaScript on
                     the frontend. NodeJS and express on the backend. Passionate about coding and intensely interested in
-                    working in a progressive organization.
+                    working in a progressive organization. -->
+                    Full stack Web Developer with proficiency in working with interdisciplinary teams and executing
+                    goal-oriented projects. Demonstrated expertise in writing production-ready code using React for
+                    frontend development, as well as NodeJS and Express for backend implementation. Strong passion for
+                    coding and a keen interest in contributing to a progressive organization.
                 </p>
 
                 <!-- <div class="hero-subhead" id="hire">
@@ -345,6 +351,20 @@
                         <img src="./images/mongodb.png" alt="NodeJs">
                     </div>
                     <p class="skills-card-name">MongoDB</p>
+                </div>
+
+                <div class="skills-card">
+                    <div class="skills-card-img">
+                        <img src="./images/react.png" alt="NodeJs">
+                    </div>
+                    <p class="skills-card-name">ReactJS</p>
+                </div>
+
+                <div class="skills-card">
+                    <div class="skills-card-img">
+                        <img src="./images/typescript.png" alt="NodeJs">
+                    </div>
+                    <p class="skills-card-name">TypeScript</p>
                 </div>
 
             </div>
@@ -735,14 +755,18 @@
                     <div>
                         <img src="./images/mail.png" alt="">
 
-                        <p id="contact-email">rishabkumarchaurasiya@gmail.com</p>
+                        <a href="mailto:rishabkumarchaurasiya@gmail.com">
+                            <p id="contact-email">rishabkumarchaurasiya@gmail.com</p>
+                        </a>
 
                     </div>
 
                     <div>
                         <img src="./images/call.png" alt="">
 
-                        <p id="contact-phone">+91 87897-04301</p>
+                        <a href="tel:+918789704301">
+                            <p id="contact-phone">+91 87897-04301</p>
+                        </a>
 
                     </div>
                 </div>
