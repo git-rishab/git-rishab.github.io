@@ -127,4 +127,4 @@ form.addEventListener("submit", async(e)=>{
     form.message.value = "";
 })
 
-AOS.init();
+AOS.init({once:true});
