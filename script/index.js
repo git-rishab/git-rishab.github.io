@@ -103,6 +103,9 @@ form.addEventListener("submit", async(e)=>{
             `I'll revert back in 24 hrs`,
             'success'
         )
+        form.name.value = "";
+        form.email.value = "";
+        form.message.value = "";
         hideLoader();
         submit.style.display = "block";
         const request = await fetch(`${url}/message`, {
@@ -122,9 +125,6 @@ form.addEventListener("submit", async(e)=>{
         hideLoader();
         submit.style.display = "block";
     }
-    form.name.value = "";
-    form.email.value = "";
-    form.message.value = "";
 })
 
 AOS.init({once:true, disable:'mobile'});
