@@ -617,6 +617,11 @@ body::-webkit-scrollbar-thumb {
     color: black;
 }
 
+@media (max-width: 376px){
+    #animation-container{
+        display: none;
+    }
+}
 
 @media (max-width: 576px) {
     #ham {

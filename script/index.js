@@ -127,4 +127,4 @@ form.addEventListener("submit", async(e)=>{
     form.message.value = "";
 })
 
-AOS.init({once:true});
+AOS.init({once:true, disable:'mobile'});
