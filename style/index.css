@@ -706,7 +706,7 @@ body::-webkit-scrollbar-thumb {
 
     /* Skills */
     #skills-part {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 95%;
     }
 
@@ -939,7 +939,7 @@ body::-webkit-scrollbar-thumb {
 
     /* Skills */
     #skills-part {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width: 95%;
     }
 
