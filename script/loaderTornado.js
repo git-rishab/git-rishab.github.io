@@ -1,6 +1,6 @@
 function showLoade() {
     const loader = document.getElementById("loader");
-    console.log(loader);
+    // console.log(loader);
     loader.style.display = "flex";
 }
 
