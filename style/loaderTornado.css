@@ -13,7 +13,7 @@
 }
 
 
-h1 {
+.loader > h1 {
   margin: 0;
   padding: 0;
   font-family: ‘Arial Narrow’, sans-serif;
@@ -22,7 +22,7 @@ h1 {
   color: #a3e1f0;
 }
 
-span {
+.loader span {
   position: relative;
   top: 0.63em;
   display: inline-block;
