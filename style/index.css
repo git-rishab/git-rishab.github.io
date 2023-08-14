@@ -380,7 +380,7 @@ body::-webkit-scrollbar-thumb {
 .project-card {
     width: fit-content;
     height: fit-content;
-    padding: 25px;
+    padding: 20px;
     border-radius: 7px;
     /* background-color: #251e46; */
     background-color: #151030;
@@ -389,7 +389,7 @@ body::-webkit-scrollbar-thumb {
 .project-title {
     color: #fff;
     font-weight: 900;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -397,6 +397,7 @@ body::-webkit-scrollbar-thumb {
 
 .project-description {
     color: #736E8D;
+    font-size: 15px;
 }
 
 .tech-stacks {
@@ -499,6 +500,10 @@ body::-webkit-scrollbar-thumb {
     /* Removes the underline on hover and focus */
     outline: none;
     /* Removes the outline on focus */
+}
+
+#generative-ai{
+    margin-bottom: 50px;
 }
 
 /* Stats */

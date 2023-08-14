@@ -128,3 +128,11 @@ form.addEventListener("submit", async(e)=>{
 })
 
 AOS.init({once:true, disable:'mobile'});
+
+(async function visited() {
+  try {
+    const req = await fetch(`${url}/logs`);
+  } catch (error) {
+    console.log(error.message);
+  }  
+}())
