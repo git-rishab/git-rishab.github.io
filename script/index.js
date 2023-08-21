@@ -30,19 +30,19 @@ const animation = bodymovin.loadAnimation({
 });
 
 
-VANTA.WAVES({
-    el: '#top-section',
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: true,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    zoom: 0.6,
-    waveSpeed: 0.55,
-    scaleMobile: 1.00,
-    color: '#132239'
-})
+// VANTA.WAVES({
+//     el: '#top-section',
+//     mouseControls: true,
+//     touchControls: true,
+//     gyroControls: true,
+//     minHeight: 200.00,
+//     minWidth: 200.00,
+//     scale: 1.00,
+//     zoom: 0.6,
+//     waveSpeed: 0.55,
+//     scaleMobile: 1.00,
+//     color: '#132239'
+// })
 
 // VANTA.DOTS({
 //   el: "#mid-section",
@@ -61,14 +61,14 @@ VANTA.WAVES({
 // })
 
 // Hero section
-window.ityped.init(document.querySelector('#user-detail-skill'),{
-    strings: ['Full Stack Web Developer','NodeJs Backend Developer'],
+window.ityped.init(document.querySelector('#user-detail-skill'), {
+    strings: ['Full Stack Web Developer', 'NodeJs Backend Developer'],
     loop: true
 })
 
 // About section
-window.ityped.init(document.querySelector('#about-section-skill'),{
-    strings: ['Full Stack Web Developer','NodeJs Backend Developer'],
+window.ityped.init(document.querySelector('#about-section-skill'), {
+    strings: ['Full Stack Web Developer', 'NodeJs Backend Developer'],
     loop: true
 })
 
@@ -80,22 +80,22 @@ const toggleMenu = () => {
 let temp = 0;
 const addFilter = () => {
     temp++;
-    if(temp % 2 == 0){
+    if (temp % 2 == 0) {
         document.getElementById("nav-menu").style.backdropFilter = "blur(16px)"
     }
 }
 
 const form = document.querySelector("form");
 
-form.addEventListener("submit", async(e)=>{
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const submit = document.getElementById("submit");
     submit.style.display = "none";
     showLoader();
     const message = {
-        name:form.name.value,
-        email:form.email.value,
-        message:form.message.value
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
     }
     try {
         Swal.fire(
@@ -109,13 +109,13 @@ form.addEventListener("submit", async(e)=>{
         hideLoader();
         submit.style.display = "block";
         const request = await fetch(`${url}/message`, {
-            method:"POST",
+            method: "POST",
             headers: {
                 "Content-type": "application/json",
             },
             body: JSON.stringify(message),
         })
-    
+
     } catch (error) {
         Swal.fire({
             icon: 'error',
@@ -127,12 +127,28 @@ form.addEventListener("submit", async(e)=>{
     }
 })
 
-AOS.init({once:true, disable:'mobile'});
+AOS.init({ once: true, disable: 'mobile' });
 
-(async function visited() {
+let requestMade = false;
+
+async function visited() {
   try {
-    const req = await fetch(`${url}/logs`);
+    if(!requestMade){
+        await fetch(`${url}/logs`);
+        requestMade = true;
+    }
   } catch (error) {
     console.log(error.message);
-  }  
-}())
+  }
+}
+
+// Event handler for scroll event
+function handleScroll() {
+    if (window.scrollY >= 700) {
+        visited(); // Call the function to make the request
+        window.removeEventListener('scroll', handleScroll); // Remove the scroll event listener
+    }
+}
+
+// Add scroll event listener
+window.addEventListener('scroll', handleScroll);
