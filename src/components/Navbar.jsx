@@ -126,7 +126,7 @@ const Navbar = () => {
           <li
             className={`text-black-200 hover:text-black-100 text-[18px] font-medium cursor-pointer`}
           >
-            <a href="https://drive.google.com/file/d/1yNKvxNJ2Ro7f-neOhRP_k-E90ePauKry/view?usp=share_link" target='_blank'>
+            <a href="https://drive.google.com/file/d/1de4WfBY1Bow8uiCPerYC8ZR1zCYwfCm0/view?usp=sharing" target='_blank'>
               Resume
             </a>
           </li>
