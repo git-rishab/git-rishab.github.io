@@ -48,7 +48,7 @@ const About = () => {
               I'm a &nbsp;
               <TypewriterComponent
                 options={{
-                  strings: ['Full Stack Web Developer', 'Software Developer', 'Node.js Backend Developer', 'Prompt Engineer'],
+                  strings: ['Full Stack Web Developer', 'Software Developer', 'Prompt Engineer'],
                   autoStart: true,
                   loop: true,
                 }}

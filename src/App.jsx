@@ -4,7 +4,7 @@ import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, Stars
 import { DriveAway, Talkies, Parenting, Home } from "./pages";
 
 const App = () => {
-  console.clear();
+  // console.clear();
   return (
     <BrowserRouter>
       {/* <div className="relative z-0">
